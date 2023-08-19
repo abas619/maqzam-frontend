@@ -1,0 +1,276 @@
+/*#region ----------------- Test Preview */
+.file-preview {
+  padding-left: 20px;
+}
+#sound-content {
+  margin-bottom: 1rem;
+  audio {
+    display: none;
+  }
+}
+.download-buttons {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.video-content {
+  margin-bottom: 1rem;
+  video,
+  iframe {
+    border-radius: 10px !important;
+    width: 100%;
+  }
+}
+.audio-player {
+  width: 100%;
+  background: $secondary;
+  direction: ltr;
+  color: white;
+  font-size: 0.75em;
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 100px 6px auto;
+  .info {
+    .track {
+      font-size: 14px;
+      margin: 3px 0;
+    }
+  }
+  .timeline {
+    background: rgba($color: white, $alpha: 0.2);
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    .progress {
+      background: $primary;
+      width: 0%;
+      height: 100%;
+      transition: 0.25s;
+      border-radius: 5px !important;
+    }
+  }
+  .play-container {
+    display: flex;
+    align-items: center;
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    .btn-play {
+      width: 44px;
+      height: 44px;
+      background-color: $primary;
+      border-radius: 50%;
+      border: none;
+      position: relative;
+      &::before {
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+        font-family: $iconFontSolid;
+        color: white;
+      }
+      &.play {
+        &::before {
+          content: "\f3b6";
+        }
+      }
+      &.pause {
+        &:before {
+          content: "\f39e";
+        }
+      }
+    }
+    .time {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      > * {
+        padding: 2px;
+      }
+    }
+    .btn-volume {
+      width: 34px;
+      height: 34px;
+      background-color: rgba($color: white, $alpha: 0.2);
+      border-radius: 50%;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      &::before {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+        font-family: $iconFontRegular;
+        color: white;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: -28px;
+        top: 10px;
+        width: 80px;
+        height: 2px;
+        background-color: $textSilver;
+        transform: rotate(-45deg);
+        opacity: 0;
+      }
+      &.normal {
+        &::before {
+          content: "\f4d1";
+        }
+      }
+      &.mute {
+        &:before {
+          content: "\f4d1";
+          color: $textSilver;
+        }
+        &::after {
+          opacity: 1;
+          color: $textSilver;
+        }
+      }
+    }
+    .volume-container {
+      margin-left: 10px;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+      .volume-slider {
+        position: absolute;
+        right: -3px;
+        top: 12px;
+        z-index: -1;
+        width: 0;
+        height: 10px;
+        background: white;
+        transition: 0.25s;
+        border-radius: 20px;
+        .volume-percentage {
+          background: $primary;
+          height: 100%;
+          width: 75%;
+        }
+      }
+      &:hover {
+        .volume-slider {
+          right: -123px;
+          width: 120px;
+        }
+      }
+    }
+  }
+}
+.pdf-content {
+  border: 1px solid $borderColor;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  .download-buttons {
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: 40px auto;
+    .icon {
+      background-color: $error;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      color: white;
+      @include displayFlex(flex, center, center);
+    }
+    ul {
+      padding-right: 15px;
+      li {
+        font-size: 15px;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}
+
+.textinfo-content {
+  padding: 10px 0;
+  margin-bottom: 1rem;
+  p {
+    font-size: 15px;
+    text-align: justify;
+    color: $textDark;
+  }
+  ul {
+    list-style: disc;
+    padding-right: 40px;
+    color: $textDark;
+    font-weight: 400;
+    li {
+      margin: 5px 0;
+    }
+  }
+}
+
+.test-tips {
+  padding-right: 30px;
+  border-right: 1px solid $borderColor;
+  h6 {
+    color: $textDark;
+  }
+  ol {
+    margin-top: 1rem;
+    li {
+      font-size: 14px;
+      margin: 10px 0;
+      text-align: justify;
+      color: $textGrey;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .file-preview {
+    padding-left: 0;
+  }
+  .test-tips {
+    padding: 30px 0 0 0;
+    border-right: none;
+    border-top: 1px solid $borderColor;
+  }
+}
+@media (max-width: 768px) {
+  .pdf-content .info ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .textinfo-content {
+    p {
+      font-size: 14px;
+    }
+    ul li {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .pdf-content .info ul li {
+    font-size: 13px;
+  }
+  .textinfo-content {
+    p {
+      font-size: 13px;
+    }
+    ul li {
+      font-size: 13px;
+    }
+  }
+  .test-tips ol li {
+    font-size: 13px;
+    margin: 5px 0;
+  }
+}
+/*#endregion -------------- Test Preview */

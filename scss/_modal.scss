@@ -1,0 +1,150 @@
+/*#region ----------------- Modal */
+.modal-content {
+  background-color: $backgroundLight;
+}
+.modal-header {
+  border-bottom-color: $borderColor;
+  .btn-close {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    background: transparent
+      url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
+      center/1em auto no-repeat;
+  }
+}
+.modal-title {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 0;
+  i {
+    margin-left: 10px;
+    position: relative;
+    top: 3px;
+    font-size: 24px;
+  }
+  img {
+    width: 40px;
+    margin-left: 10px;
+    border: 2px solid white;
+    border-radius: 3px;
+  }
+}
+.modal-body {
+  .msg {
+    font-size: 16px;
+    color: white;
+    span {
+      color: $primary;
+      margin: 0 5px;
+    }
+  }
+  .term-of-services {
+    padding: 20px;
+    ul {
+      list-style: disc;
+      li {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        color: white;
+        text-align: justify;
+      }
+    }
+  }
+}
+.modal-footer {
+  border: none;
+}
+.modal-description {
+  p {
+    font-size: 14px;
+    color: white;
+    text-align: justify;
+  }
+}
+
+.modal-protocol {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.modal-loading {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  &.active {
+    display: flex;
+  }
+  .load-inner {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    background-color: transparent;
+    width: 34px;
+    height: 34px;
+    border: 3px solid rgba($color: white, $alpha: 0.2);
+    border-radius: 50%;
+    border-color: #fff #fff rgba($color: white, $alpha: 0.4)
+      rgba($color: white, $alpha: 0.4);
+    animation: gearsRotatetop 1.5s infinite linear;
+    transition: all 0.2s ease-in-out;
+    // }
+  }
+}
+
+.modal-message {
+  padding: 30px 0;
+  display: none;
+  &.active {
+    display: block;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    @include displayFlex(flex, center, center);
+    font-size: 32px;
+    color: white;
+  }
+  &.success {
+    .icon {
+      background-color: $success;
+    }
+  }
+  &.error {
+    .icon {
+      background-color: $error;
+    }
+  }
+  h6 {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+.modal-video-preview {
+  video,
+  iframe {
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .modal-footer {
+    .btn {
+      width: 100%;
+      flex-grow: 1;
+      margin: 5px 0;
+    }
+  }
+}
+/*#endregion -------------- Modal */

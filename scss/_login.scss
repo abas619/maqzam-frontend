@@ -1,0 +1,188 @@
+/*#region ----------------- Login */
+.login-wrapper {
+  padding: 180px 0 50px 0;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(250, 200, 0, 0.3), white);
+    z-index: -1;
+  }
+  .login-title {
+    background: linear-gradient(180deg, $secondaryLight, $secondary);
+    border-radius: 12px;
+    text-align: center;
+    padding: 30px;
+    h2 {
+      color: $primary;
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+  }
+  .login-inner {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: $boxshadow;
+    margin: 0 auto;
+    padding: 20px;
+    width: 550px;
+  }
+  .nav-tabs {
+    border: none;
+    .nav-link {
+      background-color: rgba($color: $textSilver, $alpha: 0.1);
+      position: relative;
+      padding: 1rem;
+      font-size: 14px;
+      font-weight: 400;
+      color: $textGrey;
+      border: none;
+      border-radius: 10px;
+      &::before {
+        content: "";
+        position: absolute;
+        right: 50%;
+        bottom: 3px;
+        transform: translateX(50%);
+        width: 0;
+        height: 2px;
+        background-color: transparent;
+        transition: all 0.2s ease-in-out;
+      }
+      &.active {
+        color: white;
+        background-color: $secondary;
+        &::before {
+          background-color: white;
+          width: 60%;
+        }
+      }
+    }
+  }
+  .login-form {
+    margin-top: 2rem;
+  }
+  .enter-mobile-number,
+  .enter-code {
+    display: none;
+    animation: swipeRightsmall 0.2s ease-in-out;
+    &.active {
+      display: block;
+    }
+  }
+  .buttons-group {
+    margin-top: 1.2rem;
+    .btn {
+      width: 100%;
+    }
+  }
+  .link-button {
+    text-align: center;
+    margin-top: 1rem;
+    h6 {
+      font-size: 13px;
+      margin-bottom: 0;
+      color: $textGrey;
+    }
+    .btn-link {
+      padding: 0;
+      margin-right: 15px;
+      font-size: 13px;
+      text-decoration: underline 1px dashed blue !important;
+    }
+  }
+  .other-button {
+    border-top: 1px dashed $borderColor;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    @include displayFlex(flex, center, space-between);
+    .btn {
+      flex: 0 1 49%;
+      width: 49%;
+      background-color: white;
+      box-shadow: 0 5px 15px rgba($color: $textGrey, $alpha: 0.1);
+      color: $textGrey;
+      i {
+        margin-left: 5px;
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+  .msg-form {
+    font-size: 13px;
+    font-weight: 400;
+    color: $textGrey;
+    text-align: center;
+    span {
+      color: #3f9eff;
+      margin: 0 5px;
+    }
+  }
+  .resend-code {
+    padding: 10px;
+    margin-top: 1rem;
+    @include displayFlex(flex, center, space-between);
+    .btn-link {
+      font-size: 14px;
+      font-weight: 400;
+      padding: 0;
+      text-decoration: underline 1px dashed #3f9eff;
+      .fi {
+        color: $primary;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .login-wrapper {
+    padding-top: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .login-wrapper {
+    padding-top: 110px;
+  }
+}
+@media (max-width: 575px) {
+  .login-wrapper {
+    .login-inner {
+      width: 100%;
+    }
+    .resend-code {
+      flex-direction: column;
+      .btn {
+        margin-bottom: 1rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .link-button {
+      h6 {
+        display: block;
+      }
+      .btn {
+        display: block;
+        margin: 10px 0 0 0;
+      }
+    }
+    .other-button {
+      flex-direction: column;
+      .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+/*#endregion -------------- Login */

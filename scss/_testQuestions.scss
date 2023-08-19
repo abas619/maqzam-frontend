@@ -1,0 +1,175 @@
+/*#region ----------------- Test Questions */
+.test-questions {
+  position: relative;
+  padding: 180px 0 50px 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(180deg, rgba(250, 200, 0, 0.3), white);
+    z-index: -1;
+  }
+  .section-inner {
+    width: 950px;
+    margin: 0 auto;
+  }
+  .test-header {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: $boxshadow;
+    padding: 30px;
+    .name {
+      background: linear-gradient(180deg, $secondaryLight, $secondary);
+      border-radius: 15px;
+      text-align: center;
+      padding: 20px 10px;
+      h2 {
+        color: white;
+        font-size: 20px;
+      }
+      p {
+        margin-bottom: 0;
+        font-size: 14px;
+        color: rgba($color: white, $alpha: 0.9);
+      }
+    }
+    .mini-info {
+      margin-top: 12px;
+    }
+  }
+  .test-body {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: $boxshadow;
+    margin-top: 30px;
+    padding: 25px;
+  }
+  .test-information {
+    margin-top: 2rem;
+    .list {
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 10px;
+          right: 0;
+          width: 100%;
+          border: 1px dashed $borderColor;
+          z-index: -1;
+        }
+        .l-name,
+        .l-desc {
+          background-color: white;
+          font-size: 14px;
+          font-weight: 400;
+        }
+        .l-name {
+          color: $textGrey;
+          padding-left: 10px;
+        }
+        .l-desc {
+          color: $textDark;
+          padding-right: 10px;
+          font-weight: 600;
+        }
+        .error {
+          color: $error;
+        }
+        .success {
+          color: $success;
+        }
+        .toman {
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+  .buttons-group {
+    text-align: center;
+    margin-top: 3rem;
+    .btn {
+      margin: 5px 0;
+    }
+  }
+}
+
+.question-item {
+  display: grid;
+  grid-template-columns: 40px auto;
+  border-bottom: 1px solid $borderColor;
+  padding: 1.5rem 0;
+  &:last-child {
+    border-bottom: none;
+  }
+  .number {
+    width: 40px;
+    height: 40px;
+    background-color: $backgroundLight;
+    border-radius: 8px;
+    @include displayFlex(flex, center, center);
+    font-weight: 600;
+    color: $textDark;
+  }
+  .info {
+    padding-right: 20px;
+  }
+  .q-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .radio-group {
+    .form-check {
+      margin: 5px 0;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .test-questions {
+    padding-top: 120px;
+    .section-inner {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .test-questions {
+    padding-top: 110px;
+  }
+}
+@media (max-width: 575px) {
+  .test-questions {
+    .test-information {
+      .list li {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        .l-name,
+        .l-desc {
+          padding: 0;
+        }
+        .l-name {
+          margin-bottom: 10px;
+        }
+        &::before {
+          display: none;
+        }
+      }
+    }
+    .buttons-group {
+      .btn {
+        display: block;
+      }
+    }
+  }
+}
+/*#endregion -------------- Test Questions */

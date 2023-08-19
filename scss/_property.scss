@@ -1,0 +1,44 @@
+/*#region ----------------- Property */
+.property-section {
+  padding: 40px 0 100px 0;
+  .section-inner {
+    margin-top: 2rem;
+  }
+}
+
+.status-section {
+  padding-bottom: 50px;
+  .section-inner {
+    background-color: $primary;
+    padding: 40px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .property-section {
+    padding: 30px 0 80px 0;
+  }
+}
+@media (max-width: 768px) {
+  .property-section {
+    padding: 30px 0 60px 0;
+  }
+  .status-section {
+    .section-inner {
+      padding: 30px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .property-section {
+    padding: 30px 0 50px 0;
+  }
+  .status-section {
+    padding-bottom: 20px;
+    .section-inner {
+      padding: 20px;
+    }
+  }
+}
+/*#endregion -------------- Property */

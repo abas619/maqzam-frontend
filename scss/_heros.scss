@@ -1,0 +1,181 @@
+/*#region ----------------- Heros */
+.home-hero {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(250, 200, 0, 0.3), white);
+    z-index: -1;
+  }
+  .text-content {
+    h1 {
+      color: $textDark;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      width: 380px;
+      margin-left: auto;
+    }
+    p {
+      font-size: 16px;
+      line-height: 30px;
+      color: $textGrey;
+    }
+    .buttons-group {
+      margin-top: 1rem;
+      .btn {
+        margin: 10px 0 10px 10px;
+      }
+    }
+  }
+  .image-content {
+    height: 100%;
+    .img-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: -120px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .dr-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .st1 {
+      fill: $secondary;
+      animation: flicker 2s linear 2s infinite;
+    }
+    .st2 {
+      fill: $accent2;
+      animation: flicker 2.2s linear 1.5s infinite;
+    }
+    .st3 {
+      opacity: 0.48;
+      fill: #ffffff;
+      enable-background: new;
+      animation: flicker 1.7s linear 1.8s infinite;
+    }
+
+    .st4 {
+      opacity: 0.44;
+      fill: #ffffff;
+      enable-background: new;
+      animation: flicker 1.5s linear 2.2s infinite;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .home-hero {
+    .image-content {
+      .img-inner {
+        left: -142px;
+      }
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .home-hero {
+    padding-bottom: 70px;
+    .image-content {
+      .img-inner {
+        left: -130px;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .home-hero {
+    padding-bottom: 60px;
+    .image-content {
+      .img-inner {
+        width: 600px;
+        margin-right: auto;
+        left: -15px;
+      }
+    }
+    .text-content {
+      text-align: center;
+      width: 70%;
+      margin: 0 auto;
+      h1 {
+        margin: 0 auto 1rem auto;
+        width: 100%;
+        font-size: 2rem;
+      }
+      p {
+        line-height: normal;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .home-hero {
+    padding-bottom: 50px;
+    .image-content {
+      .img-inner {
+        width: 500px;
+        margin-right: auto;
+        left: -15px;
+      }
+    }
+    .text-content {
+      width: 80%;
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .home-hero {
+    .image-content {
+      .img-inner {
+        width: 400px;
+        margin-right: auto;
+        left: -15px;
+      }
+    }
+    .text-content {
+      width: 85%;
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 13px;
+      }
+      .buttons-group {
+        .btn {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .home-hero {
+    .image-content {
+      .img-inner {
+        width: 300px;
+        margin-right: auto;
+        left: -15px;
+      }
+    }
+  }
+}
+
+/*#endregion -------------- Heros */

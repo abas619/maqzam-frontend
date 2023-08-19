@@ -1,0 +1,107 @@
+/*#region ----------------- About Us */
+.about-us-section {
+  margin: 90px 0;
+  position: relative;
+  overflow: hidden;
+  .text-content {
+    padding-right: 40px;
+    .description {
+      margin-top: 1rem;
+      p {
+        text-align: justify;
+        color: $textGrey;
+      }
+    }
+  }
+  .image-content {
+    img {
+      width: 100%;
+    }
+  }
+  .buttons-group {
+    margin-top: 1.5rem;
+  }
+  &.type-2 {
+    .image-content {
+      .img-inner {
+        width: 450px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .about-us-section {
+    &.type-2 {
+      .image-content {
+        .img-inner {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .about-us-section {
+    margin: 80px 0;
+    .page-title {
+      .title-inner {
+        text-align: center;
+      }
+    }
+    .text-content {
+      padding-right: 0;
+      .description {
+        p {
+          text-align: center;
+          font-size: 15px;
+          line-height: 27px;
+        }
+      }
+    }
+    .image-content {
+      margin-top: 3rem;
+      .img-inner {
+        width: 450px;
+        margin: 0 auto;
+      }
+    }
+    .buttons-group {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-section {
+    margin: 60px 0;
+    .image-content {
+      .img-inner {
+        width: 400px;
+      }
+    }
+    .text-content .description p {
+      font-size: 14px;
+      line-height: normal;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .about-us-section {
+    .image-content .img-inner {
+      width: 90%;
+    }
+    .text-content .description p {
+      font-size: 13px;
+    }
+    &.type-2 {
+      .image-content {
+        .img-inner {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+/*#endregion -------------- About Us */

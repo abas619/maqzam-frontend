@@ -1,0 +1,115 @@
+/*#region ----------------- Car Speed */
+.car-speed-section {
+    margin: 90px 0;
+    .section-inner {
+        width: 70%;
+        margin: 2rem auto 0 auto;
+        position: relative;
+    }
+    .infinite {
+        position: relative;
+        height: 160px;
+        background: $backgroundLight;
+        border-radius: 10px 10px 0 0;
+        transform-origin: bottom;
+        transform-style: preserve-3d;
+        transform: perspective(500px) rotateX(30deg);
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 15px;
+            background: linear-gradient(90deg, #fff 0%, #fff 70%, $backgroundLight 70%, $backgroundLight 100%);
+            background-size: 120px;
+            animation: fastroad 0.1s linear infinite;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            background: $backgroundDark;
+            bottom: -30px;
+            transform-origin: top;
+            transform: perspective(500px) rotateX(-20deg);
+            border-radius: 0 0 8px 8px;
+        }
+    }
+
+    .shadow {
+        position: absolute;
+        bottom: -90px;
+        left: 50%;
+        width: calc(100% - 40px);
+        transform: translateX(-50%);
+        height: 60px;
+        background: linear-gradient(rgb(19, 19, 27), rgba(19, 19, 27, 0.7));
+    }
+
+    .box {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: animatec 0.6s linear infinite;
+    }
+
+    .car {
+        position: absolute;
+        top: -45px;
+        right: 50%;
+        transform: translateX(50%);
+        svg {
+            animation: transformYY 0.3s ease-in-out infinite;
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .car-speed-section {
+        .section-inner {
+            width: 80%;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .car-speed-section {
+        .section-inner {
+            width: 90%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .car-speed-section {
+        .section-inner {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .car-speed-section {
+        .infinite {
+            height: 100px;
+            &::before {
+                height: 6px;
+            }
+        }
+        .car {
+            top: -25px;
+            svg {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+/*#endregion -------------- Car Speed */

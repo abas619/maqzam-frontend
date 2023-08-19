@@ -1,0 +1,54 @@
+/*#region ----------------- Pagination */
+.mypagination {
+  margin: 3rem 0;
+  .page-link {
+    width: 44px;
+    height: 44px;
+    @include displayFlex(flex, center, center);
+    padding: 3px;
+    border: none;
+    color: $textGrey;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: transparent;
+    .mdi {
+      font-size: 24px;
+    }
+    &:focus,
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  .page-item {
+    margin: 3px;
+    &.active {
+      .page-link {
+        background-color: $primary;
+        color: white;
+      }
+    }
+    &:first-child .page-link {
+      border-radius: 10px !important;
+      background-color: rgba($color: black, $alpha: 0.1);
+      &:hover {
+        background-color: $primary;
+        color: white;
+      }
+    }
+    &:last-child .page-link {
+      border-radius: 10px !important;
+      background-color: rgba($color: black, $alpha: 0.1);
+      &:hover {
+        background-color: $primary;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mypagination {
+    margin: 2rem 0;
+  }
+}
+/*#region ----------------- Pagination */

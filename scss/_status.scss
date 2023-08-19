@@ -1,0 +1,23 @@
+/*#region ----------------- Status */
+.status-information {
+  background: linear-gradient(180deg, $secondaryLight, $secondary);
+  .section-inner {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .status-information {
+    .section-inner {
+      padding: 40px 0;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .status-information {
+    .section-inner {
+      padding: 30px 0;
+    }
+  }
+}
+/*#endregion -------------- Status */

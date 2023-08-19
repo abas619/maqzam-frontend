@@ -1,0 +1,25 @@
+/*#region ----------------- Master Page */
+.master-section {
+  width: 900px;
+  margin: 0 auto;
+  .address-section-inner {
+    margin-top: 5rem;
+  }
+  .form-contact {
+    background-color: white;
+    box-shadow: $boxshadowSmall;
+    border-radius: 20px;
+    padding: 30px;
+    .buttons-group {
+      margin-top: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .master-section {
+    width: 100%;
+  }
+}
+/*#endregion -------------- Master Page */

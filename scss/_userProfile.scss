@@ -1,0 +1,291 @@
+/*#region ----------------- User Profile */
+.user-profile-section {
+  position: relative;
+  padding-top: 180px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(180deg, rgba(250, 200, 0, 0.3), white);
+    z-index: -1;
+  }
+}
+.profile-header {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: $boxshadow;
+  padding: 10px 10px 0 10px;
+  .header-inner {
+    display: grid;
+    grid-template-columns: auto 200px 200px;
+  }
+  .menu-link {
+    padding-right: 20px;
+    margin-top: 10px;
+    ul {
+      @include displayFlex(flex, center, flex-start);
+      flex-wrap: wrap;
+      li {
+        a {
+          display: block;
+          padding: 10px 20px;
+          font-size: 14px;
+          color: $textDark;
+          border-bottom: 4px solid transparent;
+          border-radius: 10px 10px 0 0;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            background-color: $backgroundLight;
+          }
+        }
+        &.active {
+          a {
+            background-color: $primary;
+            border-color: $textDark;
+            font-weight: 600;
+          }
+        }
+        &.color-red a {
+          color: $error;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .information {
+    display: grid;
+    grid-template-columns: 80px auto;
+    align-items: center;
+    padding-right: 20px;
+  }
+  .user-image-thumb {
+    width: 80px;
+    height: 80px;
+    background-color: $backgroundLight;
+    border-radius: 50%;
+    padding: 20px;
+    img {
+      width: 100%;
+    }
+  }
+  .name {
+    padding: 0 15px;
+    h2 {
+      font-size: 17px;
+      color: $textDark;
+      margin-bottom: 5px;
+      @include textTruncate(1);
+    }
+    .desc {
+      font-size: 13px;
+      color: $textGrey;
+      @include textTruncate(1);
+    }
+  }
+  .test-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5px;
+    .test {
+      background: linear-gradient(180deg, $secondaryLight, $secondary);
+      border-radius: 10px;
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+      min-height: 140px;
+      .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $primary;
+        margin: 0 auto;
+        font-size: 20px;
+        @include displayFlex(flex, center, center);
+      }
+      h6 {
+        font-size: 13px;
+        margin: 10px 0 5px 0;
+        color: white;
+      }
+      h2 {
+        font-size: 18px;
+        color: white;
+        margin-top: 15px;
+        span {
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+      .btn-primary {
+        padding: 0.3rem;
+        width: 100%;
+        font-size: 13px;
+        font-weight: 800;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+    }
+    &.older-test {
+      .btn-primary {
+        display: none;
+      }
+    }
+  }
+}
+.profile-body {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: $boxshadow;
+  margin-top: 1.5rem;
+  padding: 30px 40px 40px 40px;
+  .body-inner {
+    margin-top: 3rem;
+  }
+}
+.profile-title {
+  border-bottom: 1px solid $borderColor;
+  padding-bottom: 20px;
+  @include displayFlex(flex, center, space-between);
+  .title-inner {
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: center;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $primary;
+    font-size: 20px;
+    @include displayFlex(flex, center, center);
+  }
+  h2 {
+    padding-right: 15px;
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: 800;
+    @include textTruncate(1);
+  }
+}
+
+@media (max-width: 992px) {
+  .user-profile-section {
+    padding-top: 130px;
+  }
+}
+@media (max-width: 768px) {
+  .profile-header {
+    padding: 20px 20px 0 20px;
+    .header-inner {
+      grid-template-columns: auto 200px;
+    }
+    .information {
+      grid-template-columns: 60px auto;
+      padding: 0 0 10px 0;
+    }
+    .user-image-thumb {
+      width: 60px;
+      height: 60px;
+      padding: 15px;
+    }
+    .test-info {
+      padding: 0;
+      border-radius: 15px;
+      background: linear-gradient(180deg, $secondaryLight, $secondary);
+      .test {
+        min-height: unset;
+        background: transparent;
+        border-radius: 0;
+        h6 {
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+        h2 {
+          margin-bottom: 0;
+          margin-top: 10px;
+        }
+        .icon {
+          display: none;
+        }
+      }
+      &.new-test {
+        display: none;
+      }
+      &.older-test {
+        .btn-primary {
+          display: block;
+        }
+      }
+    }
+    .menu-link {
+      margin-top: 20px;
+      padding-right: 0;
+      ul li {
+        flex-grow: 1;
+        text-align: center;
+        a {
+          padding: 10px 3px;
+        }
+      }
+    }
+  }
+  .profile-title {
+    h2 {
+      font-size: 16px;
+      padding-right: 0;
+    }
+    .icon {
+      background-color: transparent;
+    }
+    .action-buttons {
+      .btn {
+        padding: 0.45rem 1rem 0.45rem 2.2rem;
+        font-size: 14px;
+        height: 36px;
+        &::before {
+          display: none;
+        }
+        i {
+          font-size: 18px;
+          // position: relative;
+          top: 8px;
+        }
+      }
+    }
+  }
+  .profile-body {
+    padding: 20px 30px 30px 30px;
+    .body-inner {
+      margin-top: 2rem;
+    }
+    .buttons-group {
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .user-profile-section {
+    padding-top: 110px;
+  }
+  .profile-header {
+    .header-inner {
+      grid-template-columns: 100%;
+    }
+    .menu-link {
+      ul li {
+        a {
+          font-size: 12px;
+          padding: 10px 3px;
+        }
+      }
+    }
+  }
+  .profile-body {
+    padding: 10px 20px 20px 20px;
+  }
+}
+/*#endregion -------------- User Profile */
