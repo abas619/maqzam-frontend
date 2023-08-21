@@ -185,9 +185,9 @@
                 </div>
                 <div class="menu-link">
                     <ul>
-                        <li class="active"><a href="user-profile.html">اطلاعات کاربری</a></li>
+                        <li class=""><a href="user-profile.html">اطلاعات کاربری</a></li>
                         <li class=""><a href="user-tests.html">تست‌های من</a></li>
-                        <li class=""><a href="user-courses.html">دوره‌های من</a></li>
+                        <li class="active"><a href="user-courses.html">دوره‌های من</a></li>
                         <li class=""><a href="user-transactions.html">تراکنش‌ها</a></li>
                         <li class="color-red" data-bs-toggle="modal" data-bs-target="#modal-logout"><a href="#">خروج</a>
                         </li>
@@ -199,96 +199,119 @@
                 <div class="profile-title">
                     <div class="title-inner">
                         <div class="icon">
-                            <i class="fi fi-rr-add"></i>
+                            <i class="fi fi-sr-play"></i>
                         </div>
-                        <h2>اطلاعات کاربری</h2>
+                        <h2>نام دوره</h2>
                     </div>
                     <div class="action-buttons">
-                        <button type="button" class="btn btn-primary icon-right"><i class="fi fi-rr-add"></i>تست
-                            جدید</button>
+                        <a href="user-courses.html" class="btn btn-primary icon-left"><i
+                                class="fi fi-rr-arrow-left"></i>
+                            بازگشت
+                        </a>
                     </div>
                 </div>
                 <div class="body-inner">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <div class="row align-items-end">
-                                <div class="col-lg-6">
-                                    <div class="inputgroup">
-                                        <input type="text" class="input" placeholder="نام">
-                                        <div class="icon">
-                                            <i class="fi fi-rr-user"></i>
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-9">
+                            <div class="file-preview">
+                                <div id="sound-content">
+                                    <div class="audio-file-information"
+                                        data-audiosrc="https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/backsound.mp3"
+                                        data-audiotrackname="نام  فایل صوتی" data-audiovoice="دکتر سمیر دغاغله"
+                                        data-audiomb="12 مگابایت">
+                                    </div>
+                                    <div class="audio-player">
+                                        <div class="info">
+                                            <div class="track trackname">نام فایل صوتی</div>
+                                            <div class="track trackvoice">گوینده : سمیر دغاغله</div>
+                                            <div class="track trackmb">16 مگابایت</div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="inputgroup">
-                                        <input type="text" class="input" placeholder="نام خانوادگی">
-                                        <div class="icon">
-                                            <i class="fi fi-rr-user"></i>
+                                        <div class="timeline">
+                                            <div class="progress"></div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="selectgroup">
-                                        <label>میزان تحصیلات</label>
-                                        <select name="education">
-                                            <option value="0">دیپلم</option>
-                                            <option value="1">فوق دیپلم</option>
-                                            <option value="2">لیسانس</option>
-                                            <option value="3">فوق لیسانس</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="inputgroup">
-                                        <input type="number" class="input" placeholder="سن">
-                                        <div class="icon">
-                                            <i class="fi fi-rr-calendar"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="radio-group">
-                                        <label>جنسیت</label>
-                                        <div class="radio-inner">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="radio-gender"
-                                                    id="radio-gender-1" checked>
-                                                <label class="form-check-label" for="radio-gender-1">
-                                                    مرد
-                                                </label>
+                                        <div class="controls">
+                                            <div class="play-container">
+                                                <button type="button" class="btn-play play"></button>
+                                                <div class="volume-container">
+                                                    <button type="button" class="btn-volume normal"></button>
+                                                    <div class="volume-slider">
+                                                        <div class="volume-percentage"></div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="radio-gender"
-                                                    id="radio-gender-2">
-                                                <label class="form-check-label" for="radio-gender-2">
-                                                    زن
-                                                </label>
+                                            <div class="time">
+                                                <div class="current">0:00</div>
+                                                <div class="divider">/</div>
+                                                <div class="length"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="inputgroup">
-                                        <input type="email" class="input" placeholder="آدرس ایمیل">
+                                <div class="download-buttons">
+                                    <a href="#" class="btn btn-primary icon-right">
+                                        <i class="fi fi-rr-download"></i>
+                                        دانلود فایل
+                                    </a>
+                                </div>
+                                <div class="video-content">
+                                    <div class="video-inner">
+                                        <video controls>
+                                            <source src="video/mov_bbb.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="download-buttons">
+                                    <a href="#" class="btn btn-primary icon-right">
+                                        <i class="fi fi-rr-download"></i>
+                                        دانلود فایل
+                                    </a>
+                                </div>
+                                <div class="pdf-content">
+                                    <div class="info">
                                         <div class="icon">
-                                            <i class="fi fi-rr-envelope"></i>
+                                            <i class="fi fi-rr-file"></i>
                                         </div>
+                                        <ul>
+                                            <li>نام فایل : <span>درمان قطعی ریزش مو</span></li>
+                                            <li>نویسنده : <span>دکتر شریفی</span></li>
+                                            <li>فرمت فایل : <span>پی دی اف (PDF)</span></li>
+                                            <li>حجم فایل : <span>12 مگابایت</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="download-buttons">
+                                        <a href="#" class="btn btn-primary icon-right">
+                                            <i class="fi fi-rr-download"></i>
+                                            دانلود فایل
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
-                                    <div class="textarea-group">
-                                        <textarea class="textarea" ols="30" rows="3" placeholder="آدرس"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="buttons-group mt-4">
-                                        <button type="button" class="btn btn-primary icon-right"><i
-                                                class="fi fi-rr-check"></i>ثبت تغییرات</button>
-                                    </div>
+                                <div class="textinfo-content">
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                                        طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                                        لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+                                        بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
+                                        آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت
+                                        بیشتری را برای طراحان رایانه ای علی </p>
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                                        طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                                        لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+                                        بهبود ابزارهای کاربردی می باشد، کتابهای </p>
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                                        طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                                        لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+                                        بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
+                                        آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با </p>
+                                    <ul>
+                                        <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت </li>
+                                        <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت </li>
+                                        <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت </li>
+                                        <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -438,9 +461,9 @@
     </div>
 
 
-
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js" type="text/javascript"></script>
+    <script src="js/player.js" type="text/javascript"></script>
 
 </body>
 

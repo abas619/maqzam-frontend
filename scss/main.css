@@ -705,7 +705,7 @@ input[type=number] {
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(250, 200, 0, 0.3), white);
+  background: linear-gradient(180deg, rgba(250, 200, 0, 0.2), white);
   z-index: -1;
 }
 .home-hero .text-content h1 {
@@ -1212,6 +1212,10 @@ input[type=number] {
   justify-content: center;
   transition: all 0.3s ease-in-out;
 }
+.card-transaction .thumb img {
+  width: 100%;
+  border-radius: 10px;
+}
 .card-transaction .info {
   padding-right: 15px;
 }
@@ -1219,17 +1223,17 @@ input[type=number] {
   margin: 5px 0;
 }
 .card-transaction .info ul li span {
-  display: inline-block;
   font-size: 14px;
   font-weight: 600;
 }
 .card-transaction .info ul li .name {
-  color: #4c4f64;
+  color: #818392;
 }
 .card-transaction .info ul li .desc {
   color: #000523;
   padding: 2px 5px;
   border-radius: 6px;
+  width: 100%;
 }
 .card-transaction .info ul li .desc.success {
   color: #62bb77;
@@ -1266,6 +1270,10 @@ input[type=number] {
   padding: 0.4rem 0.6rem;
   font-size: 13px;
   border-radius: 8px;
+}
+.card-transaction.type-image .card-inner {
+  grid-template-columns: 120px auto;
+  border-radius: 15px 15px 0 0;
 }
 
 .card-mini-blog {
@@ -2590,13 +2598,16 @@ input[type=number] {
   color: rgba(255, 255, 255, 0.8);
 }
 .footer .call-content .call-info .data h6 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: white;
   margin-bottom: 0;
 }
 .footer .call-content .call-info .data a {
   color: white;
+}
+.footer .call-content .call-info .data a:hover {
+  color: #fac800;
 }
 .footer .footer-inner {
   padding: 20px 0 0 0;
@@ -2833,7 +2844,18 @@ input[type=number] {
   right: 0;
   width: 100%;
   height: 300px;
-  background: linear-gradient(180deg, rgba(250, 200, 0, 0.3), white);
+  z-index: -1;
+  background: conic-gradient(from 150deg at 50% 33%, rgba(0, 0, 0, 0), rgba(250, 200, 0, 0.1) 0.5deg 60deg, rgba(0, 0, 0, 0) 60.5deg) 60px 85.7142857143px, conic-gradient(from -30deg at 50% 66%, rgba(0, 0, 0, 0), rgba(250, 200, 0, 0.15) 0.5deg 60deg, #fff 60.5deg);
+  background-size: 120px 103.986135182px;
+}
+.user-profile-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgb(255, 255, 255));
   z-index: -1;
 }
 
@@ -3100,6 +3122,9 @@ input[type=number] {
 @media (max-width: 575px) {
   .user-profile-section {
     padding-top: 110px;
+  }
+  .profile-header {
+    padding: 10px 10px 0 10px;
   }
   .profile-header .header-inner {
     grid-template-columns: 100%;
