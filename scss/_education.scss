@@ -107,6 +107,19 @@
 
 .course-details-section {
   margin: 170px 0 30px 0;
+  &.type-preview {
+    margin-top: 0;
+    .section-inner {
+      box-shadow: none;
+      border-radius: 0;
+    }
+    .course-information {
+      .inner {
+        padding: 0;
+        grid-template-columns: auto 350px;
+      }
+    }
+  }
   .mybreadcrumb {
     .breadcrumb-item {
       a {
@@ -229,6 +242,7 @@
           margin-top: 20px;
           .btn {
             width: 100%;
+            margin-bottom: 8px;
             &:disabled {
               background: $backgroundLight;
               color: $textSilver;
@@ -481,6 +495,13 @@
         grid-template-columns: auto 350px;
       }
     }
+    &.type-preview {
+      .course-information {
+        .inner {
+          grid-template-columns: auto 300px;
+        }
+      }
+    }
   }
 }
 @media (max-width: 992px) {
@@ -532,6 +553,26 @@
           li {
             font-size: 14px;
             line-height: 24px;
+          }
+        }
+      }
+    }
+    &.type-preview {
+      .course-information {
+        .inner {
+          grid-template-columns: 100%;
+        }
+        .information {
+          .details {
+            .btns-group {
+              @include displayFlex(flex, center, space-between);
+              flex-wrap: wrap;
+              .btn {
+                flex: 1 0 30%;
+                width: 30%;
+                margin: 5px;
+              }
+            }
           }
         }
       }
@@ -606,6 +647,20 @@
       .tab-content {
         .tab-inner {
           padding: 0 20px 10px 20px;
+        }
+      }
+    }
+    &.type-preview {
+      .course-information {
+        .information {
+          .details {
+            .btns-group {
+              .btn {
+                flex: 1 0 45%;
+                width: 45%;
+              }
+            }
+          }
         }
       }
     }
@@ -770,6 +825,21 @@
       }
       .info {
         padding: 0;
+      }
+    }
+    &.type-preview {
+      .course-information {
+        .information {
+          .details {
+            .btns-group {
+              .btn {
+                flex: 1 0 100%;
+                width: 100%;
+                margin: 5px 0;
+              }
+            }
+          }
+        }
       }
     }
   }

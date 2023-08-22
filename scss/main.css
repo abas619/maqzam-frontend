@@ -3031,6 +3031,199 @@ input[type=number] {
   overflow: hidden;
 }
 
+.course-season-list {
+  margin-top: 2rem;
+}
+.course-season-list .collapse-item {
+  margin-bottom: 10px;
+}
+.course-season-list .collapse-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px 12px 0 0;
+  background-color: #e4e9ee;
+  padding: 10px 20px;
+  min-height: 59px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border: 1px solid rgba(0, 5, 35, 0.15);
+}
+.course-season-list .collapse-header .info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.course-season-list .collapse-header .icon {
+  text-align: left;
+}
+.course-season-list .collapse-header .icon .icon-inner {
+  margin-right: auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  transform: rotate(-90deg);
+  color: #4c4f64;
+}
+.course-season-list .collapse-header .icon .icon-inner .fi {
+  font-size: 24px;
+  line-height: 0;
+  color: #818392;
+}
+.course-season-list .collapse-header .name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000523;
+  display: flex;
+}
+.course-season-list .collapse-header .name .fi {
+  margin-left: 10px;
+  font-size: 22px;
+  line-height: 0 !important;
+  color: #818392;
+}
+.course-season-list .collapse-header .name span {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.course-season-list .collapse-header .number {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 400;
+  color: #000523;
+  margin-left: 20px;
+}
+.course-season-list .collapse-header .test-button {
+  margin-left: 20px;
+}
+.course-season-list .collapse-header .test-button .btn {
+  padding: 0.5rem;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.course-season-list .collapse-header .test-button .btn.success {
+  background: #62bb77;
+  color: white;
+}
+.course-season-list .collapse-header .test-button .btn.success .fi {
+  color: white;
+}
+.course-season-list .collapse-header .test-button .btn.success:hover {
+  background: #4aaa61;
+}
+.course-season-list .collapse-header .test-button .btn.error {
+  background: #de392a;
+  color: white;
+}
+.course-season-list .collapse-header .test-button .btn.error .fi {
+  color: white;
+}
+.course-season-list .collapse-header .test-button .btn.error:hover {
+  background: #c12c1e;
+}
+.course-season-list .collapse-header .test-button .btn:hover {
+  background: #d1a700;
+}
+.course-season-list .collapse-header .test-button .btn .fi {
+  margin-left: 8px;
+  position: relative;
+  top: 3px;
+}
+.course-season-list .collapse-header.collapsed {
+  border-radius: 12px;
+}
+.course-season-list .collapse-header.collapsed .icon .icon-inner {
+  transition: all 0.2s ease;
+  transform: rotate(0);
+}
+.course-season-list .card {
+  border: 1px solid rgba(0, 5, 35, 0.15);
+  margin-top: -1px;
+  border-radius: 0 0 12px 12px;
+}
+.course-season-list .card p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4c4f64;
+}
+.course-season-list .card .item {
+  background-color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.course-season-list .card .item:hover .sub-info {
+  background-color: #e4e9ee;
+  border-color: rgba(0, 5, 35, 0.15);
+}
+.course-season-list .card .item .sub-info {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: auto 100px 34px;
+  align-items: center;
+  padding: 8px 20px 8px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 5, 35, 0.15);
+}
+.course-season-list .card .item .name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4c4f64;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.course-season-list .card .item .time {
+  font-size: 13px;
+  font-weight: 300;
+  padding-left: 15px;
+  text-align: left;
+}
+.course-season-list .card .item .icon {
+  width: 34px;
+  height: 34px;
+  background-color: #fac800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+}
+.course-season-list .card .item .test-button {
+  padding-right: 15px;
+}
+.course-season-list .card .item .test-button .btn {
+  padding: 0.6rem 1rem;
+  font-size: 13px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.course-season-list .card .item .test-button .btn.success {
+  background: #62bb77;
+  border-color: transparent;
+  color: white;
+}
+.course-season-list .card .item .test-button .btn.error {
+  background: #de392a;
+  border-color: transparent;
+  color: white;
+}
+.course-season-list .card .item .test-button .btn .fi {
+  margin-left: 8px;
+  position: relative;
+  top: 3px;
+}
+
 @media (max-width: 992px) {
   .user-profile-section {
     padding-top: 130px;
@@ -3135,6 +3328,66 @@ input[type=number] {
   }
   .profile-body {
     padding: 10px 20px 20px 20px;
+  }
+  .course-season-list .collapse-header {
+    padding: 10px 15px;
+    flex-direction: column;
+  }
+  .course-season-list .collapse-header .name {
+    flex: 0 0 100%;
+    width: 100%;
+    font-size: 13px;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  .course-season-list .collapse-header .name .fi {
+    font-size: 18px;
+  }
+  .course-season-list .collapse-header .number {
+    font-size: 12px;
+  }
+  .course-season-list .collapse-header .icon .icon-inner .fi {
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+  }
+  .course-season-list .collapse-header .info {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  .course-season-list .card {
+    padding: 13px 10px;
+  }
+  .course-season-list .card .item {
+    flex-direction: column;
+  }
+  .course-season-list .card .item .sub-info {
+    grid-template-columns: auto 30px;
+    grid-template-areas: "itemName itemIcon" "itemTime itemIcon";
+    padding: 5px 10px;
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  .course-season-list .card .item .name {
+    font-size: 13px;
+    grid-area: itemName;
+  }
+  .course-season-list .card .item .time {
+    font-size: 12px;
+    grid-area: itemTime;
+    text-align: right;
+  }
+  .course-season-list .card .item .icon {
+    grid-area: itemIcon;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .course-season-list .card .item .test-button {
+    margin-right: auto;
+  }
+  .course-season-list .card .item .test-button .btn {
+    border-radius: 0 0 8px 8px;
   }
 }
 /*#endregion -------------- User Profile */
@@ -5248,6 +5501,17 @@ input[type=number] {
 .course-details-section {
   margin: 170px 0 30px 0;
 }
+.course-details-section.type-preview {
+  margin-top: 0;
+}
+.course-details-section.type-preview .section-inner {
+  box-shadow: none;
+  border-radius: 0;
+}
+.course-details-section.type-preview .course-information .inner {
+  padding: 0;
+  grid-template-columns: auto 350px;
+}
 .course-details-section .mybreadcrumb .breadcrumb-item a {
   color: #2ca964;
 }
@@ -5362,6 +5626,7 @@ input[type=number] {
 }
 .course-details-section .course-information .information .details .btns-group .btn {
   width: 100%;
+  margin-bottom: 8px;
 }
 .course-details-section .course-information .information .details .btns-group .btn:disabled {
   background: #e4e9ee;
@@ -5597,6 +5862,9 @@ input[type=number] {
   .course-details-section .course-information .inner {
     grid-template-columns: auto 350px;
   }
+  .course-details-section.type-preview .course-information .inner {
+    grid-template-columns: auto 300px;
+  }
 }
 @media (max-width: 992px) {
   .maqzam-section {
@@ -5639,6 +5907,20 @@ input[type=number] {
   .course-details-section .tab-detailsContent .description ul li {
     font-size: 14px;
     line-height: 24px;
+  }
+  .course-details-section.type-preview .course-information .inner {
+    grid-template-columns: 100%;
+  }
+  .course-details-section.type-preview .course-information .information .details .btns-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .course-details-section.type-preview .course-information .information .details .btns-group .btn {
+    flex: 1 0 30%;
+    width: 30%;
+    margin: 5px;
   }
 }
 @media (max-width: 768px) {
@@ -5696,6 +5978,10 @@ input[type=number] {
   }
   .course-details-section .tab-detailsContent .tab-content .tab-inner {
     padding: 0 20px 10px 20px;
+  }
+  .course-details-section.type-preview .course-information .information .details .btns-group .btn {
+    flex: 1 0 45%;
+    width: 45%;
   }
   .card-course .info .name {
     font-size: 14px;
@@ -5816,6 +6102,11 @@ input[type=number] {
   }
   .course-details-section .teacher-details .info {
     padding: 0;
+  }
+  .course-details-section.type-preview .course-information .information .details .btns-group .btn {
+    flex: 1 0 100%;
+    width: 100%;
+    margin: 5px 0;
   }
 }
 /*#endregion -------------- Education */

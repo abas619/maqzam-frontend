@@ -200,6 +200,194 @@
   }
 }
 
+.course-season-list {
+  margin-top: 2rem;
+  .collapse-item {
+    margin-bottom: 10px;
+  }
+  .collapse-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px 12px 0 0;
+    background-color: $backgroundLight;
+    padding: 10px 20px;
+    min-height: 59px;
+    user-select: none;
+    border: 1px solid $borderColor;
+    .info {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .icon {
+      text-align: left;
+      .icon-inner {
+        margin-right: auto;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+        transform: rotate(-90deg);
+        color: $textGrey;
+        .fi {
+          font-size: 24px;
+          line-height: 0;
+          color: $textSilver;
+        }
+      }
+    }
+    .name {
+      font-size: 15px;
+      font-weight: 500;
+      color: $textDark;
+      display: flex;
+      .fi {
+        margin-left: 10px;
+        font-size: 22px;
+        line-height: 0 !important;
+        color: $textSilver;
+      }
+      span {
+        @include textTruncate(1);
+      }
+    }
+    .number {
+      text-align: left;
+      font-size: 13px;
+      font-weight: 400;
+      color: $textDark;
+      margin-left: 20px;
+    }
+    .test-button {
+      margin-left: 20px;
+      .btn {
+        padding: 0.5rem;
+        font-size: 13px;
+        font-weight: 400;
+        border-radius: 8px;
+        white-space: nowrap;
+        &.success {
+          background: $success;
+          color: white;
+          .fi {
+            color: white;
+          }
+          &:hover {
+            background: darken($color: $success, $amount: 8);
+          }
+        }
+        &.error {
+          background: $error;
+          color: white;
+          .fi {
+            color: white;
+          }
+          &:hover {
+            background: darken($color: $error, $amount: 8);
+          }
+        }
+        &:hover {
+          background: darken($color: $primary, $amount: 8);
+        }
+        .fi {
+          margin-left: 8px;
+          position: relative;
+          top: 3px;
+        }
+      }
+    }
+
+    &.collapsed {
+      border-radius: 12px;
+      .icon {
+        .icon-inner {
+          transition: all 0.2s ease;
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+  .card {
+    border: 1px solid $borderColor;
+    margin-top: -1px;
+    border-radius: 0 0 12px 12px;
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textGrey;
+    }
+    .item {
+      background-color: white;
+      margin-bottom: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:hover {
+        .sub-info {
+          background-color: $backgroundLight;
+          border-color: $borderColor;
+        }
+      }
+      .sub-info {
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: auto 100px 34px;
+        align-items: center;
+        padding: 8px 20px 8px 8px;
+        border-radius: 8px;
+        border: 1px solid $borderColor;
+      }
+      .name {
+        font-size: 14px;
+        font-weight: 500;
+        color: $textGrey;
+        @include textTruncate(1);
+      }
+      .time {
+        font-size: 13px;
+        font-weight: 300;
+        padding-left: 15px;
+        text-align: left;
+      }
+      .icon {
+        width: 34px;
+        height: 34px;
+        background-color: $primary;
+        border-radius: 50%;
+        @include displayFlex(flex, center, center);
+        color: white;
+        font-size: 14px;
+      }
+      .test-button {
+        padding-right: 15px;
+        .btn {
+          padding: 0.6rem 1rem;
+          font-size: 13px;
+          border-radius: 8px;
+          white-space: nowrap;
+          &.success {
+            background: $success;
+            border-color: transparent;
+            color: white;
+          }
+          &.error {
+            background: $error;
+            border-color: transparent;
+            color: white;
+          }
+          .fi {
+            margin-left: 8px;
+            position: relative;
+            top: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .user-profile-section {
     padding-top: 130px;
@@ -315,6 +503,68 @@
   }
   .profile-body {
     padding: 10px 20px 20px 20px;
+  }
+  .course-season-list {
+    .collapse-header {
+      padding: 10px 15px;
+      flex-direction: column;
+      .name {
+        flex: 0 0 100%;
+        width: 100%;
+        font-size: 13px;
+        text-align: right;
+        margin-bottom: 10px;
+        .fi {
+          font-size: 18px;
+        }
+      }
+      .number {
+        font-size: 12px;
+      }
+      .icon .icon-inner .fi {
+        font-size: 20px;
+        position: relative;
+        top: 2px;
+      }
+      .info {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+    }
+    .card {
+      padding: 13px 10px;
+      .item {
+        flex-direction: column;
+        .sub-info {
+          grid-template-columns: auto 30px;
+          grid-template-areas: "itemName itemIcon" "itemTime itemIcon";
+          padding: 5px 10px;
+          flex: 0 0 100%;
+          width: 100%;
+        }
+        .name {
+          font-size: 13px;
+          grid-area: itemName;
+        }
+        .time {
+          font-size: 12px;
+          grid-area: itemTime;
+          text-align: right;
+        }
+        .icon {
+          grid-area: itemIcon;
+          width: 30px;
+          height: 30px;
+          font-size: 12px;
+        }
+        .test-button {
+          margin-right: auto;
+          .btn {
+            border-radius: 0 0 8px 8px;
+          }
+        }
+      }
+    }
   }
 }
 /*#endregion -------------- User Profile */
